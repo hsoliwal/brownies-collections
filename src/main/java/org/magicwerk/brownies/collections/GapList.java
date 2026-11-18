@@ -999,9 +999,7 @@ public class GapList<E> extends IList<E> {
 		}
 		// Inline of Arrays.fill
 		assert (end - start <= len);
-		for (int i = start; i < end; i++) {
-			values[i] = null;
-		}
+		Arrays.fill(values, start, end, null);
 
 		if (DEBUG_TRACE) {
 			if (DEBUG_DUMP) {
