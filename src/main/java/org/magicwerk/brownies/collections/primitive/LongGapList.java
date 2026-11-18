@@ -1149,7 +1149,6 @@ public class LongGapList extends ILongList {
             System.arraycopy(values, 0, newValues, 0, values.length);
         } else if (start > 0) {
             int grow = newCapacity - values.length;
-            newValues = (long[]) new long[newCapacity];
             System.arraycopy(values, 0, newValues, 0, start);
             System.arraycopy(values, start, newValues, start + grow, values.length - start);
             if (gapStart > start && gapSize > 0) {
