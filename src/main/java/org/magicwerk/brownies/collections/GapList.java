@@ -1194,7 +1194,6 @@ public class GapList<E> extends IList<E> {
 
 		} else if (start > 0) {
 			int grow = newCapacity - values.length;
-			newValues = (E[]) new Object[newCapacity];
 			System.arraycopy(values, 0, newValues, 0, start);
 			System.arraycopy(values, start, newValues, start + grow, values.length - start);
 			if (gapStart > start && gapSize > 0) {
